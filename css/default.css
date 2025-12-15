@@ -1,0 +1,232 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    font-size: 12px;
+    /* overflow: auto; REMOVED to fix fixed positioning issues */
+    color: #fff;
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
+}
+
+#mainDiv {
+    width: 100%;
+    height: 100%
+}
+
+#mainContent {
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#elapseClock {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', monospace !important;
+}
+
+#messageBox {
+    display: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#elapseClock .digit {
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', monospace !important;
+    text-align: center;
+    color: #ff0000;
+    text-shadow: 0 0 2px #fff, 0 0 10px #ff0000;
+}
+
+#elapseClock .years,
+#elapseClock .text-years {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+#elapseClock .months,
+#elapseClock .text-months {
+    font-size: 28px;
+}
+
+#elapseClock .days,
+#elapseClock .text-days {
+    font-size: 24px;
+}
+
+#elapseClock .hours,
+#elapseClock .text-hours {
+    font-size: 20px;
+}
+
+#elapseClock .minutes,
+#elapseClock .text-minutes {
+    font-size: 16px;
+}
+
+#elapseClock .seconds,
+#elapseClock .text-seconds {
+    font-size: 12px;
+}
+
+#signature {
+    padding: 5px;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#signature-placeholder {
+    padding: 5px;
+    font-size: 22px;
+    margin-top: 100px;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#signature .signature-text {
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: italic
+}
+
+#clickSound {
+    display: none
+}
+
+#terminal {
+    float: left;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    min-height: 400px;
+    color: #fff;
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', 'sans-serif';
+    font-size: 16px;
+    margin: 50px auto;
+}
+
+#terminal .string {
+    color: #2a36ff
+}
+
+#terminal .keyword {
+    color: #7f0055;
+    font-weight: bold
+}
+
+#terminal .placeholder {
+    margin-left: 15px
+}
+
+#terminal .space {
+    margin-left: 7px
+}
+
+#terminal .comments {
+    color: #00ff00
+}
+
+#copyright {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    color: #fff
+}
+
+#errorMsg {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    top: 100px;
+    left: 0
+}
+
+#copyright a {
+    color: #fff
+}
+
+#icon {
+    font-size: 48px;
+    color: red;
+    margin: 50 px;
+    align-content: center;
+}
+
+#iconSpan {
+    align-content: center;
+    text-align: center;
+    margin: 20px;
+    display: block;
+}
+
+#messageBox,
+#elapseClock,
+#signature,
+#signature .signature-text {
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', monospace !important;
+    text-shadow: 0 0 2px #fff, 0 0 10px #ff0000;
+    background: transparent;
+}
+
+#graduationTitle {
+    display: block !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    text-shadow: 0 0 2px #000, 0 0 10px #ff0000;
+}
+
+#skipButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 2147483647;
+    /* Max z-index to be on top of everything */
+    cursor: pointer;
+    background: red;
+    border: 2px solid white;
+    display: block !important;
+    /* Force display */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    #terminal {
+        font-size: 12px;
+        /* Increased font size for mobile - EDIT HERE FOR SIZE */
+        width: 95%;
+        /* Use almost full width */
+        margin: 20px auto;
+    }
+
+    #terminal .space {
+        margin-left: 10px;
+        /* Adjust spacing slightly */
+    }
+}

@@ -23,7 +23,7 @@ $(function () {
 		}
 	});
 
-	// Visual indicator check loop (ensures it stays visible)
+	// Invisible skip button (clickable area in top-left corner)
 	setInterval(function () {
 		if ($("#skipIndicator").length === 0) {
 			var $indicator = $('<div id="skipIndicator">SKIP</div>');
@@ -31,16 +31,13 @@ $(function () {
 				"position": "fixed",
 				"top": "0",
 				"left": "0",
-				"width": "60px",
-				"height": "60px",
-				"line-height": "60px",
-				"text-align": "center",
-				"font-weight": "bold",
+				"width": "100px",
+				"height": "50px",
 				"z-index": "2147483647",
-				"background": "red",
-				"color": "white",
-				"pointer-events": "none",
-				"border": "2px solid white"
+				"background": "transparent",
+				"color": "transparent",
+				"pointer-events": "auto",
+				"cursor": "pointer"
 			});
 			$('body').append($indicator);
 		}

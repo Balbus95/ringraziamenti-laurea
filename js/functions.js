@@ -47,7 +47,6 @@ $(function () {
 // Removed resize reload logic as it causes issues on mobile
 $(window).resize(function () {
 	// Optional: Adjust layout if needed, but do not reload
-	adjustCodePosition();
 });
 
 
@@ -118,7 +117,3 @@ function timeElapse(date) {
 	$("#elapseClock").html(result);
 }
 
-function adjustCodePosition() {
-	// Simplified centering
-	$('#terminal').css("margin-top", ($("#mainContent").height() - $("#terminal").height()) / 2);
-}
